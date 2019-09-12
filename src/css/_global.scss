@@ -1,0 +1,142 @@
+html,
+body {
+  height: 100%;
+  font-size: 17px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+button,
+input,
+::placeholder {
+  font-family: $font_primary;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+
+  .icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 25px;
+      height: auto;
+    }
+
+  }
+}
+
+.title_section {
+  text-align: center;
+  padding: 1rem 2rem 2.5rem 2rem;
+
+  h1 {
+    line-height: 1.1;
+    font-size: 2.4rem;
+  }
+}
+
+.content {
+  .card {
+    position: relative;
+    font-weight: normal;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin: .7rem;
+    border: 2px solid $c_border;
+    width: 155px;
+    border-radius: $radius;
+    overflow: hidden;
+    max-width: 200px;
+    transition: background 200ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      background: $co_border_light;
+    }
+
+    & .title {
+      font-size: 1.9rem;
+    }
+
+    & p {
+      font-size: .9rem;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  &::active {
+    border: 2px solid $c_accent;
+    background: none !important;
+  }
+
+  &:active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 40px;
+    height: 15px;
+    background: $c_accent;
+    transform: rotate(45deg);
+  }
+}
+
+.apple_store {
+  border: 2px solid $c_border;
+  border-radius: $radius;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem .7rem 3rem .7rem;
+
+  img {
+    width: 15px;
+    height: auto;
+    margin: .5rem;
+  }
+}

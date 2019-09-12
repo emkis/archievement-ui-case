@@ -1,0 +1,17 @@
+{
+  "name": "archievement-ui-case",
+  "version": "1.0.0",
+  "repository": "https://github.com/emkis/archievement-ui-case.git",
+  "author": "Nicolas Jardim <nicolasemkis@gmail.com>",
+  "main": "index.html",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html --public-url ./"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.23.0-module.beta.1"
+  }
+}
