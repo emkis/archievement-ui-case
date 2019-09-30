@@ -1,7 +1,11 @@
-html,
-body {
+html {
   height: 100%;
   font-size: 17px;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -22,16 +26,17 @@ img {
 }
 
 nav {
+  background: #fff;
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 4.5rem;
   padding: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: left;
-  align-items: center;
+  align-items: flex-end;
 
   .icon {
     display: inline-block;
@@ -62,53 +67,85 @@ nav {
 }
 
 .content {
-  .card {
-    position: relative;
-    font-weight: normal;
-    text-align: center;
-    padding: 1rem 2rem;
-    margin: .7rem;
-    border: 2px solid $c_border;
-    width: 155px;
-    border-radius: $radius;
-    overflow: hidden;
-    max-width: 200px;
-    transition: background 200ms ease-in-out;
-
-    &:hover,
-    &:focus {
-      background: $co_border_light;
-    }
-
-    & .title {
-      font-size: 1.9rem;
-    }
-
-    & p {
-      font-size: .9rem;
-    }
-  }
+  margin-bottom: 2.5rem;
 }
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  max-width: $space_container;
+  padding-right: $space;
+  padding-left: $space;
   margin-right: auto;
   margin-left: auto;
 
   .row {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .center {
     justify-content: center;
     align-items: center;
   }
+
+  .between {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.apple_store {
+  border: 2px solid $c_border;
+  border-radius: $radius;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+
+  img {
+    width: 15px;
+    height: auto;
+    margin: .5rem;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.card-item {
+  width: calc(100% / 2 - .5rem);
+  padding: .5rem 0;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-weight: normal;
+  text-align: center;
+  padding: 1rem 2rem;
+  border: 2px solid $c_border;
+  border-radius: $radius;
+  overflow: hidden;
+  transition: background 200ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background: $co_border_light;
+  }
+
+  & .title {
+    font-size: 1.9rem;
+  }
+
+  & p {
+    font-size: .9rem;
+  }
+
   &::active {
     border: 2px solid $c_accent;
     background: none !important;
@@ -123,20 +160,5 @@ nav {
     height: 15px;
     background: $c_accent;
     transform: rotate(45deg);
-  }
-}
-
-.apple_store {
-  border: 2px solid $c_border;
-  border-radius: $radius;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 1rem .7rem 3rem .7rem;
-
-  img {
-    width: 15px;
-    height: auto;
-    margin: .5rem;
   }
 }
