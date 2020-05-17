@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  font-size: 17px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -31,30 +31,25 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 1rem;
+  height: 65px;
   display: flex;
-  flex: 1;
-  flex-direction: row;
-  justify-content: left;
+  justify-content: space-between;
   align-items: flex-end;
   border-bottom: 1px solid #ddd;
-  opacity: .9;
+  opacity: 0.98;
 
   .icon {
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
 
     img {
-      width: 25px;
+      width: 18px;
       height: auto;
     }
-
   }
 }
 
@@ -97,7 +92,7 @@ nav {
 }
 
 .apple_store {
-  border: 2px solid $c_border;
+  border: 1px solid $c_border;
   border-radius: $radius;
   display: flex;
   justify-content: space-around;
@@ -108,7 +103,7 @@ nav {
   img {
     width: 15px;
     height: auto;
-    margin: .5rem;
+    margin: 0.5rem;
   }
 }
 
@@ -119,8 +114,8 @@ nav {
 }
 
 .card-item {
-  width: calc(100% / 2 - .5rem);
-  padding: .5rem 0;
+  width: calc(100% / 2 - 0.5rem);
+  padding: 0.5rem 0;
 }
 
 .card {
@@ -130,7 +125,7 @@ nav {
   font-weight: normal;
   text-align: center;
   padding: 1rem 2rem;
-  border: 2px solid $c_border;
+  border: 1px solid $c_border;
   border-radius: $radius;
   overflow: hidden;
   transition: background 200ms ease-in-out;
@@ -145,7 +140,7 @@ nav {
   }
 
   & p {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   &::active {
@@ -154,7 +149,7 @@ nav {
   }
 
   &:active::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: -10px;

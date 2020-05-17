@@ -12,9 +12,7 @@
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "parcel-bundler": "^1.12.3",
-    "sass": "^1.23.0-module.beta.1"
-  },
-  "dependencies": {
-    "date-fns": "^2.0.0-beta.5"
+    "sass": "^1.23.0-module.beta.1",
+    "sass-rem": "^2.0.1"
   }
 }

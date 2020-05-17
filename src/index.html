@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Achievement UI Case</title>
+    <link rel="stylesheet" href="./styles/index.scss" />
 
-  <link rel="stylesheet" href="css/main.scss">
-</head>
+    <title>Achievement UI Case</title>
+  </head>
 
-<body>
+  <body>
+    <nav class="navbar">
+      <a class="navbar__link" href="#">
+        <div class="navbar__icon">
+          <img src="./assets/icons/arrow-left-icon.svg" alt="Go back" />
+        </div>
+      </a>
+    </nav>
 
-  <nav>
-    <a href="#">
-      <div class="icon">
-        <img src="assets/arrow-left.svg" alt="back">
-      </div>
-    </a>
-  </nav>
+    <main class="main">
+      <header class="header">
+        <h1 class="header__title">Choose<br />your plan</h1>
+      </header>
 
-  <div class="title_section">
-    <h1>Choose<br>your plan</h1>
-  </div>
-
-  <div class="content">
-    <div class="container">
-
-      <div class="cards">
+      <section class="plans">
         <div class="card-item">
           <div class="card active">
             <p class="title">Free</p>
@@ -54,25 +51,20 @@
             <p class="title">199$</p>
             <p>one time</p>
           </div>
-
-        </div> <!-- cards  -->
-      </div> <!-- container  -->
+        </div>
+      </section>
 
       <div class="row center">
         <div class="btn apple_store">
-          <!-- <img src="" alt="Apple Logo"> -->
+          <img src="./assets/icons/apple-play-icon.svg" alt="Apple Play" />
           <span>Apple Pay</span>
-          <img src="assets/arrow-right.svg" alt=">">
+          <img src="./assets/icons/arrow-right-icon.svg" alt="Continue" />
         </div>
       </div>
 
       <div class="row center">
         <button class="btn accent">Continue</button>
       </div>
-
-    </div>
-  </div>
-
-</body>
-
+    </main>
+  </body>
 </html>
