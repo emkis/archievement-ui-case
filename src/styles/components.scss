@@ -2,15 +2,20 @@
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   height: rem(60px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   opacity: 0.98;
   background: #fff;
-  border-bottom: 1px solid $color_gray_light;
+  border-color: $color_gray_light;
   z-index: $layer_tree;
+
+  &.scrolled {
+    border-bottom: 1px solid $color_gray_light;
+  }
 
   &__link {
     cursor: pointer;
@@ -72,7 +77,7 @@
     &:hover,
     &:focus,
     &:active {
-      background: darken($color_primary, $amount: 10%);
+      background: darken($color_primary, 10%);
     }
   }
 
@@ -83,7 +88,7 @@
     &:hover,
     &:focus,
     &:active {
-      background: $color_gray_light;
+      background: lighten($color_gray_light, 10%);
     }
   }
 }
@@ -115,7 +120,7 @@
 
     &:hover,
     &:focus {
-      background: rgba($color_gray_light, 0.35);
+      background: lighten($color_gray_light, 10%);
     }
 
     &--active {
@@ -162,7 +167,7 @@
     text-align: center;
     text-decoration: none;
     margin: rem(16px 0 32px);
-    color: darken($color_gray_light, 10);
+    color: darken($color_gray_light, 30%);
   }
 }
 
