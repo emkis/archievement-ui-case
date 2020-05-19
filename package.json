@@ -14,5 +14,8 @@
     "parcel-bundler": "^1.12.3",
     "sass": "^1.23.0-module.beta.1",
     "sass-rem": "^2.0.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
