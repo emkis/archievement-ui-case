@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/*.html",
-    "prod": "parcel build src/*.html --public-url ./"
+    "build": "parcel build src/*.html --public-url ./ --no-source-maps"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
