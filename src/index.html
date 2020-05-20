@@ -15,55 +15,56 @@
   </head>
 
   <body>
-    <nav class="navbar">
+    <nav class="navbar --pale">
       <a class="navbar__link" href="#">
         <div class="navbar__icon">
           <img src="./assets/icons/arrow-left-icon.svg" alt="Go back" />
         </div>
       </a>
+      <a class="navbar__link" href="#">
+        <div class="navbar__icon">
+          <img src="./assets/icons/settings-icon.svg" alt="Go to settings" />
+        </div>
+      </a>
     </nav>
-
-    <main class="main">
-      <header class="header">
-        <h1 class="header__title">Choose<br />your plan</h1>
+    <!-- <h1 class="header__title">🤓👏💳🗓🐦</h1> -->
+    <main class="main --pale">
+      <header class="header --pale">
+        <div class="circle-wrapper">🤓</div>
+        <div class="title-wrapper">
+          <strong>Ray Cooper</strong>
+          <h1>300<span>points</span></h1>
+        </div>
       </header>
 
-      <section class="plans">
-        <ul class="plans-list">
-          <li class="plans__item">
-            <h3 class="plans__title">Free</h3>
-            <p class="plans__description">7 days</p>
+      <section class="rewards">
+        <header class="tabs">
+          <img src="./assets/icons/trophy-icon.svg" alt="Trophy" />
+          <img src="./assets/icons/chart-icon.svg" alt="Chart" />
+          <p>5 <span>of</span> 10</p>
+        </header>
+        <ul class="rewards-list">
+          <li class="rewards-list__item">
+            <div class="circle-wrapper">👏</div>
+            <p>Refer a friend</p>
+            <small>+1000</small>
           </li>
-          <li class="plans__item">
-            <h3 class="plans__title">8$</h3>
-            <p class="plans__description">30 days</p>
+          <li class="rewards-list__item">
+            <div class="circle-wrapper">🐦</div>
+            <p>Share to twitter</p>
+            <small>+100</small>
           </li>
-          <li class="plans__item plans__item--active">
-            <h3 class="plans__title">14$</h3>
-            <p class="plans__description">60 days</p>
+          <li class="rewards-list__item">
+            <div class="circle-wrapper">🗓</div>
+            <p>Lorem ipsum</p>
+            <small>+300</small>
           </li>
-          <li class="plans__item">
-            <h3 class="plans__title">199$</h3>
-            <p class="plans__description">One time</p>
+          <li class="rewards-list__item">
+            <div class="circle-wrapper">💳</div>
+            <p>Sit dollor amet</p>
+            <small>+450</small>
           </li>
         </ul>
-
-        <button class="button button--secondary payment">
-          <img
-            class="apple-icon"
-            src="./assets/icons/apple-play-icon.svg"
-            alt="Apple Play"
-          />
-          Apple Pay
-          <img
-            class="arrow-icon"
-            src="./assets/icons/arrow-right-icon.svg"
-            alt="Continue"
-          />
-        </button>
-        <a href="#" class="information">See terms and conditions</a>
-
-        <button class="button button--primary">Continue</button>
       </section>
     </main>
   </body>

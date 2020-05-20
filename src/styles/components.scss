@@ -1,10 +1,11 @@
+$navbar-height: 60px;
+
 .navbar {
   position: sticky;
   top: 0;
   left: 0;
-  width: 95%;
-  margin: 0 auto;
-  height: rem(60px);
+  padding: 0 5.5%;
+  height: rem($navbar-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,6 +36,16 @@
   }
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 60px);
+}
+
+.--pale {
+  background: $color_secondary;
+}
+
 .header {
   padding: rem(20px 0 25px);
   text-align: center;
@@ -45,6 +56,46 @@
     font-weight: 600;
     line-height: 1.2;
   }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(40px 0 40px);
+}
+
+.circle-wrapper {
+  width: rem(50px);
+  height: rem(50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f7b6a0;
+}
+
+.title-wrapper {
+  text-align: left;
+
+  > h1 {
+    margin: 10px 0 0;
+    font-size: 70px;
+
+    > span {
+      font-size: 18px;
+      font-weight: 400;
+      margin-left: 8px;
+    }
+  }
+}
+
+.circle-wrapper {
+  justify-self: flex-start;
+  align-self: flex-start;
+  margin-right: 20px;
+  margin-left: -10px;
+  margin-top: -15px;
 }
 
 .button {
@@ -94,9 +145,8 @@
 }
 
 .plans {
-  max-width: 85%;
-  margin: 0 auto;
-  padding-bottom: rem(32px);
+  width: 100%;
+  padding: 0 7.5% rem(32px);
 
   &-list {
     display: grid;
@@ -190,5 +240,71 @@
     border: 1px solid #000;
     border-radius: 2px;
     margin-right: rem(15px);
+  }
+}
+
+.rewards {
+  $radius: rem(36px);
+
+  flex: 1;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  background: white;
+  overflow: auto;
+
+  & .tabs {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(35px 40px 25px);
+    background: white;
+    border-bottom: 1px solid $color_gray_light;
+    z-index: $layer_one;
+
+    > img {
+      width: rem(24px);
+    }
+
+    > p {
+      font-size: rem(18px);
+
+      span {
+        color: darken($color_gray_light, 30%);
+      }
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: rem(18px);
+    list-style: none;
+
+    &__item {
+      width: 100%;
+      padding: rem(20px 15px);
+      align-self: center;
+      justify-self: center;
+      text-align: center;
+
+      > .circle-wrapper {
+        margin: 0 auto 15px;
+        height: rem(120px);
+        width: rem(120px);
+        font-size: rem(30px);
+      }
+
+      > p {
+        line-height: 1.5;
+      }
+
+      > small {
+        color: $color_accent;
+      }
+    }
   }
 }
