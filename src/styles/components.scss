@@ -1,11 +1,9 @@
-$navbar-height: 60px;
-
 .navbar {
   position: sticky;
   top: 0;
   left: 0;
-  padding: 0 5.5%;
-  height: rem($navbar-height);
+  padding: 0 10px;
+  height: rem(65px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +37,7 @@ $navbar-height: 60px;
 .main {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 60px);
+  height: calc(100% - 65px);
 }
 
 .--pale {
@@ -154,7 +152,6 @@ $navbar-height: 60px;
     grid-template-rows: 1fr 1fr;
     grid-gap: 15px;
     padding: rem(5px 0 30px);
-    list-style: none;
   }
 
   &__item {
@@ -259,43 +256,91 @@ $navbar-height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: rem(35px 40px 25px);
+    padding: 0;
     background: white;
     border-bottom: 1px solid $color_gray_light;
     z-index: $layer_one;
 
-    > img {
-      width: rem(24px);
-    }
+    &__item {
+      display: flex;
+      height: rem(75px);
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
 
-    > p {
-      font-size: rem(18px);
+      &--active {
+        border-bottom: 2px solid $color_accent;
+      }
 
-      span {
-        color: darken($color_gray_light, 30%);
+      > img {
+        width: rem(24px);
+      }
+
+      > p {
+        color: black;
+        font-size: rem(18px);
+
+        span {
+          color: darken($color_gray_light, 30%);
+        }
       }
     }
   }
 
   &-list {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-bottom: rem(18px);
-    list-style: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: $color_gray_light;
+    }
+
+    &::before {
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 100%;
+    }
+
+    &::after {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+    }
 
     &__item {
       width: 100%;
+      position: relative;
       padding: rem(20px 15px);
       align-self: center;
       justify-self: center;
       text-align: center;
 
+      &:nth-child(1) > .circle-wrapper {
+        background: $color_orange_pastel;
+      }
+      &:nth-child(2) > .circle-wrapper {
+        background: $color_blue_pastel;
+      }
+      &:nth-child(3) > .circle-wrapper {
+        background: $color_pink_pastel;
+      }
+      &:nth-child(4) > .circle-wrapper {
+        background: $color_green_pastel;
+      }
+
       > .circle-wrapper {
         margin: 0 auto 15px;
         height: rem(120px);
         width: rem(120px);
-        font-size: rem(30px);
+        font-size: rem(35px);
       }
 
       > p {
@@ -303,7 +348,15 @@ $navbar-height: 60px;
       }
 
       > small {
-        color: $color_accent;
+        color: $color_orange_accent;
+      }
+
+      > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }
