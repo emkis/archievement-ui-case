@@ -37,7 +37,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 65px);
+  height: 100%;
 }
 
 .--pale {
@@ -50,7 +50,7 @@
 
   &__title {
     margin: 0;
-    font-size: rem(30px);
+    font-size: rem(35px);
     font-weight: 600;
     line-height: 1.2;
   }
